@@ -16,7 +16,7 @@ const run = async () => {
   const entrypoints = await fs.readdir(entrypointDir);
 
   for (const entrypoint of entrypoints) {
-    if (!entrypoint.endsWith(".d.ts")) return;
+    if (!entrypoint.endsWith(".d.ts")) continue;
 
     const entrypointBase = entrypoint.replace(".d.ts", "");
 
@@ -26,6 +26,10 @@ const run = async () => {
       fs.copyFile(
         path.join(entrypointDir, entrypoint),
         path.join(distDir, `${entrypointBase}.d.ts`)
+      ),
+      fs.copyFile(
+        path.join(entrypointDir, entrypoint),
+        path.join(distDir, `${entrypointBase}.d.mts`)
       ),
     ]);
   }

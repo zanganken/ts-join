@@ -1,7 +1,6 @@
 {
   "name": "@zanganken/ts-join",
   "version": "0.0.1",
-  "private": "false",
   "description": "Global typing utility for ReadonlyArray.join to return the value of it as a type",
   "keywords": [
     "typescript",
@@ -23,15 +22,20 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "default": "./dist/index.js"
+    },
+    "./array-join": {
+      "types": "./dist/array-join.d.ts",
+      "import": "./dist/array-join.mjs",
+      "default": "./dist/array-join.js"
     }
   },
   "scripts": {
     "dev": "tsx src/",
-    "build": "tsx scripts/build.ts --clean"
+    "build": "tsup && tsx scripts/build.ts"
   },
   "devDependencies": {
-    "@total-typescript/ts-reset": "^0.6.1",
     "@types/node": "^22.13.14",
+    "tsup": "^8.4.0",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   }
