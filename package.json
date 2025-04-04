@@ -1,0 +1,38 @@
+{
+  "name": "@zanganken/ts-join",
+  "version": "0.0.1",
+  "private": "false",
+  "description": "Global typing utility for ReadonlyArray.join to return the value of it as a type",
+  "keywords": [
+    "typescript",
+    "typings",
+    "types",
+    "readonlyarray",
+    "array",
+    "join"
+  ],
+  "license": "MIT",
+  "author": "Zanganken",
+  "repository": "https://github.com/zanganken/ts-join",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "tsx src/",
+    "build": "tsx scripts/build.ts --clean"
+  },
+  "devDependencies": {
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@types/node": "^22.13.14",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
