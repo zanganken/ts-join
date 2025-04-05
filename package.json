@@ -1,6 +1,6 @@
 {
   "name": "@zanganken/ts-join",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Global typing utility for ReadonlyArray.join to return the value of it as a type",
   "keywords": [
     "typescript",
